@@ -47,3 +47,5 @@ t4 = PythonOperator(
     dag=dag
 )
 t1 >> t2 >> t3 >> t4
+
+# t1 >> [t2 , t3] >> t4 
