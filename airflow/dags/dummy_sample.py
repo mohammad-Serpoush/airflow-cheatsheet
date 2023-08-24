@@ -33,7 +33,7 @@ t7 = BashOperator(task_id="print_7", bash_command="echo 7", dag=dag)
 t8 = BashOperator(task_id="print_8", bash_command="echo 8", dag=dag)
 t9 = BashOperator(task_id="print_9", bash_command="echo 9", dag=dag)
 
-dummy_t = EmptyOperator("empty", dag=dag)
+dummy_t = EmptyOperator(task_id="empty", dag=dag)
 
 
 [t1, t2, t3, t4] >> dummy_t >> [t5, t6, t7, t8, t9]
